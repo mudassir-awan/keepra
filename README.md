@@ -25,7 +25,7 @@ Keepra is a private, offline-first productivity app that puts six tools in one w
 <p align="center">
   <img src="assets/screenshot-desktop.png" alt="Keepra on Windows" width="700" />
   <br />
-  <em>Keepra on Windows (dark theme)</em>
+  <em>Keepra on Windows</em>
 </p>
 
 <p align="center">
@@ -33,6 +33,8 @@ Keepra is a private, offline-first productivity app that puts six tools in one w
   <br />
   <em>Keepra on Android</em>
 </p>
+
+See the **[full visual guide with screenshots of every section](docs/GUIDE.md)** including the MCP Connector setup.
 
 ## What is inside
 
