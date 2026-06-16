@@ -1,0 +1,29 @@
+# Keepra
+
+> Keepra is a private, offline-first productivity app for Web, Windows, and Android.
+> It combines six tools in one window: Links, Vault (encrypted credentials), Notes, Tasks, Contacts, and Drive.
+> All data is AES-256-GCM encrypted and stored locally. Cloud sync is zero-knowledge.
+
+## App
+
+- [Keepra Web App](https://keepra.tech/app.html): The live app. Works in any browser. PWA-installable for offline use.
+- [Downloads](https://keepra.tech/downloads/): Windows Electron installer and Android APK.
+
+## Documentation
+
+- [Installation Guide](docs/INSTALL.md): How to install Keepra on Web, Windows, and Android.
+- [MCP Integration Guide](docs/MCP-SETUP.md): How to connect Claude Desktop, Claude Code, Cursor, Windsurf to Keepra via MCP.
+- [Changelog](docs/CHANGELOG.md): What changed in each version.
+- [Roadmap](docs/ROADMAP.md): Planned features and current status.
+- [Security Policy](SECURITY.md): Encryption model and vulnerability disclosure.
+
+## Key Facts
+
+- **What Keepra does**: Manages links/bookmarks, passwords/credentials, Markdown notes, to-do tasks, contacts, and files in a single encrypted app.
+- **Encryption**: AES-256-GCM with PBKDF2 (600,000 iterations, SHA-256). Zero-knowledge: the server never sees plaintext.
+- **Platforms**: Web (PWA), Windows 10+ (Electron), Android 8+ (APK). iOS/macOS planned.
+- **Pricing**: Free during public beta (2026). Paid plans (Free / Pro / Lifetime) launching around Q4 2026.
+- **MCP**: Keepra ships an MCP server (keepra-mcp.js) for AI client integration. Works with Claude Desktop, Claude Code, Cursor, Windsurf.
+- **Sync**: Cross-device sync via a single Secret Key. Same key on any device means same Firebase account means same decrypted data. No email or password required.
+- **Open source**: No. Proprietary. This GitHub repository is the public community hub (issues, docs, downloads).
+- **Contact**: keepra.tech - support@keepra.tech
