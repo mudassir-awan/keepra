@@ -44,11 +44,24 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 
 ## Claude Code (CLI)
 
-```bash
-claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -e KEEPRA_URL=http://127.0.0.1:47615 -- node C:\Keepra\keepra-mcp.js
+Open `~/.claude/settings.json` (create it if it doesn't exist) and add under `"mcpServers"`:
+
+```json
+{
+  "mcpServers": {
+    "keepra": {
+      "command": "node",
+      "args": ["C:\\Keepra\\keepra-mcp.js"],
+      "env": {
+        "KEEPRA_KEY": "YOUR_KEY_HERE",
+        "KEEPRA_URL": "http://127.0.0.1:47615"
+      }
+    }
+  }
+}
 ```
 
-Verify: `claude mcp list` should show `keepra`.
+Save the file — Claude Code picks it up automatically on the next session.
 
 Test: start a session and type *"Show my Keepra notes"*.
 

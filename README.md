@@ -95,11 +95,7 @@ Quick config for Claude Desktop (replace `YOUR_KEY_HERE` with the key you create
 }
 ```
 
-Claude Code CLI:
-
-```bash
-claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -e KEEPRA_URL=http://127.0.0.1:47615 -- node C:\Keepra\keepra-mcp.js
-```
+Claude Code — open `~/.claude/settings.json` and add the same block under `"mcpServers"`. Save the file; Claude Code picks it up on the next session.
 
 Full guide: [docs/MCP-SETUP.md](docs/MCP-SETUP.md)
 
