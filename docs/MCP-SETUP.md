@@ -28,7 +28,8 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
       "command": "node",
       "args": ["C:\\Keepra\\keepra-mcp.js"],
       "env": {
-        "KEEPRA_KEY": "YOUR_KEY_HERE"
+        "KEEPRA_KEY": "YOUR_KEY_HERE",
+        "KEEPRA_URL": "http://127.0.0.1:47615"
       }
     }
   }
@@ -44,7 +45,7 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 ## Claude Code (CLI)
 
 ```bash
-claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -- node C:\Keepra\keepra-mcp.js
+claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -e KEEPRA_URL=http://127.0.0.1:47615 -- node C:\Keepra\keepra-mcp.js
 ```
 
 Verify: `claude mcp list` should show `keepra`.
@@ -79,13 +80,19 @@ Any client that supports the MCP standard accepts the same `{"mcpServers": {"kee
 
 ## Available MCP tools
 
-| Tool | Read | Write |
-|------|------|-------|
-| `tasks:read` / `tasks:write` | ✅ | ✅ |
-| `notes:read` / `notes:write` | ✅ | ✅ |
-| `links:read` / `links:write` | ✅ | ✅ |
-| `contacts:read` / `contacts:write` | ✅ | ✅ |
-| Vault items | Per-item grant | — |
+| Scope | Tools | Notes |
+|-------|-------|-------|
+| `tasks:read` | `list_tasks` | — |
+| `tasks:write` | `add_task`, `complete_task` | — |
+| `notes:read` | `list_notes`, `read_note` | — |
+| `notes:write` | `create_note`, `update_note` | — |
+| `links:read` | `list_links` | — |
+| `links:write` | `add_link` | — |
+| `contacts:read` | `list_contacts`, `get_contact` | — |
+| `contacts:write` | `add_contact` | — |
+| Vault item grant | `list_credentials`, `get_credential` | Per-item, enabled in each item's edit modal |
+| Vault item grant + run_command opt-in | `run_command` | Executes shell commands with vault secrets injected as env vars. Requires explicit opt-in when creating the key. Keepra asks for confirmation on first use. |
+| Vault item grant | `ftp_list`, `ftp_upload`, `ftp_download`, `ftp_delete`, `ftp_mkdir`, `ftp_rename` | FTP operations using credentials stored in the vault. The AI never sees the password. |
 
 Grant only the scopes your AI needs — scope down to individual vault items for maximum security.
 

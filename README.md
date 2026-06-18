@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.1-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-1.0.2-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20Android-brightgreen?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/status-public%20beta-orange?style=flat-square" alt="Beta" />
   <img src="https://img.shields.io/badge/MCP-Claude%20%7C%20Cursor%20%7C%20Windsurf-purple?style=flat-square" alt="MCP" />
@@ -87,7 +87,8 @@ Quick config for Claude Desktop (replace `YOUR_KEY_HERE` with the key you create
       "command": "node",
       "args": ["C:\\Keepra\\keepra-mcp.js"],
       "env": {
-        "KEEPRA_KEY": "YOUR_KEY_HERE"
+        "KEEPRA_KEY": "YOUR_KEY_HERE",
+        "KEEPRA_URL": "http://127.0.0.1:47615"
       }
     }
   }
@@ -97,7 +98,7 @@ Quick config for Claude Desktop (replace `YOUR_KEY_HERE` with the key you create
 Claude Code CLI:
 
 ```bash
-claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -- node C:\Keepra\keepra-mcp.js
+claude mcp add keepra -e KEEPRA_KEY=YOUR_KEY_HERE -e KEEPRA_URL=http://127.0.0.1:47615 -- node C:\Keepra\keepra-mcp.js
 ```
 
 Full guide: [docs/MCP-SETUP.md](docs/MCP-SETUP.md)

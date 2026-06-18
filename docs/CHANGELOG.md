@@ -4,6 +4,31 @@ All notable changes to Keepra are documented here.
 
 ---
 
+## [1.0.2] — 2026-06-19
+
+### Added
+- **Per-item MCP grants** — each link, vault credential, task, contact, and note can individually grant AI access via a robot checkbox in its edit modal. Only items you explicitly unlock are visible to the AI.
+- **MCP key auto-rotation** — keys now support automatic rotation on a schedule: Never / 1 h / 6 h / 12 h / 24 h / 7 d / 30 d. Set it in Settings → MCP → edit a key.
+- **`run_command` tool** — opt-in shell command execution with vault secrets injected as env vars. The AI never sees secret values; Keepra injects them into the child process. Enabled per key with an explicit checkbox.
+- **FTP tools** — six new MCP tools (`ftp_list`, `ftp_upload`, `ftp_download`, `ftp_delete`, `ftp_mkdir`, `ftp_rename`) that operate using FTP credentials stored in your vault. No credentials are ever exposed to the AI.
+- **`run_command` audit log** — every shell command executed through MCP is logged to `%APPDATA%\keepra\keepra-mcp-audit.log` with key prefix, command, directory, and exit code.
+- **ChatGPT (Codex CLI) and Perplexity** setup instructions added to the MCP settings view.
+
+### Changed
+- **`run_command` confirmation dialog** now uses an in-app styled overlay instead of a native OS dialog. Includes a "Trust this key for the session" checkbox — approve once and subsequent commands from the same key run silently until Keepra restarts.
+- **MCP rate limit** capped at 60 requests per minute per key.
+- **Sync passphrase minimum** raised to 8 characters.
+
+### Security
+- **XSS fix** — note tag `onclick` handlers now use HTML-escaped values.
+- **Markdown RCE fix** — HTML inside code fences is no longer un-escaped.
+- **UNC path block** — `run_command` rejects UNC paths (`\\server\share`) to prevent NTLM hash leaks.
+- **`javascript:` href block** — Markdown link renderer blocks `javascript:` URLs.
+- **Security headers** — Electron HTTP responses now include `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, and `COOP`.
+- **Coupon generation** uses `crypto.getRandomValues` (removed hardcoded fallback).
+
+---
+
 ## [1.0.1] — 2026-06-16
 
 ### Added
