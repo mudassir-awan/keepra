@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.2-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-1.0.3-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20Android-brightgreen?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/status-public%20beta-orange?style=flat-square" alt="Beta" />
   <img src="https://img.shields.io/badge/MCP-Claude%20%7C%20Cursor%20%7C%20Windsurf-purple?style=flat-square" alt="MCP" />
@@ -18,15 +18,28 @@
 
 ---
 
-Keepra is a private, offline-first productivity app that puts six tools in one window: a link manager, an encrypted vault, a Markdown notepad, a task manager, a contacts directory, and a file drive. Everything is encrypted locally and works without internet. Cloud sync is optional and zero-knowledge.
+Keepra is a private, offline-first productivity app that puts **seven tools in one window**: a link manager, an AES-256 encrypted vault, a Markdown notepad, a task manager, a contacts directory, a file drive, and an **MCP Connector** that gives Claude, Cursor, and other AI assistants scoped local access to your data. Everything is encrypted on your device and works without internet. Cloud sync is optional and zero-knowledge.
 
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshot-desktop.png" alt="Keepra on Windows" width="700" />
+  <img src="assets/screenshot-desktop.png" alt="Keepra on Windows — Links section" width="700" />
   <br />
-  <em>Keepra on Windows</em>
+  <em>Keepra Desktop — Links section (Windows)</em>
 </p>
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="assets/tab-dashboard.png" width="220" /><br/><sub>Dashboard</sub></td>
+    <td align="center"><img src="assets/tab-vault.png" width="220" /><br/><sub>Vault</sub></td>
+    <td align="center"><img src="assets/tab-notes.png" width="220" /><br/><sub>Notes</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/tab-tasks.png" width="220" /><br/><sub>Tasks</sub></td>
+    <td align="center"><img src="assets/tab-contacts.png" width="220" /><br/><sub>Contacts</sub></td>
+    <td align="center"><img src="assets/tab-mcp-integration.png" width="220" /><br/><sub>MCP Connector</sub></td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="assets/screenshot-android.png" alt="Keepra on Android" width="300" />
@@ -40,12 +53,14 @@ See the **[full visual guide with screenshots of every section](docs/GUIDE.md)**
 
 | Tool | What it does |
 |------|-------------|
-| Links | Save Zoom, Meet, Teams, and any other URL. Click once to open. Organize with categories and tags. |
-| Vault | Store passwords, API keys, SSH keys, cards, and secure notes. AES-256-GCM encrypted. Zero-knowledge. |
-| Notes | Markdown notepad with live preview, auto-save, and tags. Works offline. |
-| Tasks | To-do lists with My Day, priorities, due dates, subtasks, and recurring tasks. |
-| Contacts | A personal directory. Each contact can have unlimited phones, emails, and links. |
-| Drive | 50 MB encrypted file storage. Supports images, PDFs, and ZIPs. Synced as ciphertext. |
+| 🏠 Dashboard | Home view — stat tiles, My Day, Recent Links, Pinned items, Recent Notes. Read-only aggregator. |
+| 🔗 Links | Save Zoom, Meet, Teams, and any other URL. Click once to open. Categories, tags, pin, grid/list view. |
+| 🔐 Vault | Store passwords, API keys, SSH keys, cards, and secure notes. AES-256-GCM encrypted. Zero-knowledge. |
+| 📝 Notes | Markdown notepad with live preview, split view, auto-save, and tags. Works fully offline. |
+| ✅ Tasks | To-do lists with My Day, Important, Planned smart lists, priorities, due dates, subtasks, and recurrence. |
+| 👥 Contacts | A personal directory. Each contact can have unlimited phones, emails, and links with custom labels. |
+| 📁 Drive | 50 MB encrypted file storage. Images, PDFs, ZIPs. Binary content in IndexedDB, synced as ciphertext. |
+| 🤖 MCP Connector | Give Claude, Cursor, or any MCP AI scoped, local-only access to your tasks, notes, links, and contacts. Per-item vault grants. Device-local keys, never sent to the cloud. |
 
 ## Download
 
@@ -75,6 +90,8 @@ That is it. No email address, no separate password, no account registration.
 ## Connect an AI assistant (MCP)
 
 Keepra ships an MCP server that lets Claude, Cursor, Windsurf, and other AI tools read and write your tasks, notes, links, and contacts. Each connection uses a scoped API key that you create inside the app. You choose exactly which tools the AI can access.
+
+**Prerequisites:** Keepra desktop app running + [Node.js](https://nodejs.org/en/download) installed (AI clients launch the server by running `node keepra-mcp.js`).
 
 **Step-by-step setup: open Keepra, go to Settings, then MCP, then MCP Integration.**
 

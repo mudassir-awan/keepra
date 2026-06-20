@@ -4,6 +4,29 @@ All notable changes to Keepra are documented here.
 
 ---
 
+## [1.0.3] — 2026-06-20
+
+### Added
+- **In-app back navigation** — full browser history stack via `pushState`. Pressing back within the app navigates between sections instead of leaving the page.
+- **Exit confirmation modal** — pressing back on the home section (or Android hardware back) shows a "Leave Keepra?" dialog instead of immediately navigating away.
+- **Claude.ai Remote MCP** — HTTP+SSE bridge (`keepra-mcp-http.js`) so Claude.ai web can connect via a Cloudflare tunnel without installing anything locally.
+- **Per-item MCP key button** — a `🔑 Key` button on every item modal (Links, Vault, Tasks, Contacts, Notes) creates a dedicated scoped key for that specific item in one click.
+- **Node.js prerequisite detection** — Keepra Desktop detects whether Node.js is installed at startup and shows a yellow banner when it is missing (required to run the MCP server).
+
+### Changed
+- **Electron X button now closes correctly** — `beforeunload` was silently blocking the window close in Electron. Fixed by detecting the Electron context via user agent and skipping the handler there.
+- **Link Open button** no longer stretches full-width on a maximised window.
+- **Landing page hero** overhauled: stat tiles use icon → label → value layout with six equal-width tiles; sidebar bottom items aligned correctly.
+
+### SEO
+- **Blog post URLs** cleaned: numeric prefixes removed from all 10 posts (`01-why-keepra-exists` → `why-keepra-exists`, etc.). Old URLs 301-redirect via `.htaccess`.
+- **All page `<title>` tags** shortened to under 55 characters. MCP keyword added to homepage, blog, and help titles.
+- **MCP Connector H2** on the landing page updated to "MCP Connector — Let Claude & AI access your private data".
+- **`blog.html`** `<meta name="keywords">` added.
+- **Homepage** canonical, Open Graph, schema.org JSON-LD completed (was missing entirely).
+
+---
+
 ## [1.0.2] — 2026-06-19
 
 ### Added
