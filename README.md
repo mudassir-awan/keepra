@@ -18,7 +18,7 @@
 
 ---
 
-**Keepra keeps your digital life in one private window.** It bundles seven everyday tools — a link manager, an AES-256 encrypted vault, a notepad, a task manager, a contacts directory, and a file drive — plus an **MCP Connector** that lets the AI assistant you already use (Claude, ChatGPT, Cursor, Windsurf, or any MCP-compatible client) work with your data through scoped, revocable, local-only access.
+**Keepra keeps your digital life in one private window.** It bundles six everyday tools — a link manager, an AES-256 encrypted vault, a notepad, a task manager, a contacts directory, and a file drive — tied together by a unified dashboard. On top of that sits its standout **MCP feature**: scoped, revocable, local-only access that lets the AI assistant you already use (Claude, ChatGPT, Cursor, Windsurf, or any MCP-compatible client) work with your data.
 
 Everything is stored and encrypted **on your device** and works fully offline. Cloud sync is optional and **zero-knowledge** — the server only ever sees ciphertext. No account is required to start; one Secret Key links all your devices.
 
