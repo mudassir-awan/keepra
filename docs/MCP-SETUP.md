@@ -2,7 +2,9 @@
 
 Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocable API keys.
 
-> **Prerequisites:** Keepra desktop app installed and running on your PC.
+> **Prerequisites:**
+> - Keepra desktop app installed and running on your PC.
+> - **Node.js** installed and available in your system PATH. AI clients launch the MCP server by running `node keepra-mcp.js` — without it the connection silently fails. [Download Node.js →](https://nodejs.org/en/download)
 
 ---
 
@@ -11,7 +13,7 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 1. Open Keepra on your PC
 2. Go to **Settings → MCP → My Keys**
 3. Click **New Key**
-4. Name the key (e.g. "Claude Desktop"), select the tools the AI can access, then click Save
+4. Name the key (e.g. "Claude Desktop", "ChatGPT", or "Cursor"), select the tools the AI can access, then click Save
 5. Click the 👁 eye icon to reveal and copy the key
 
 ---
@@ -64,6 +66,22 @@ Open `~/.claude/settings.json` (create it if it doesn't exist) and add under `"m
 Save the file — Claude Code picks it up automatically on the next session.
 
 Test: start a session and type *"Show my Keepra notes"*.
+
+---
+
+## ChatGPT (Desktop)
+
+ChatGPT Desktop supports MCP servers through **Settings → Connectors** (available on plans where MCP/Developer mode is enabled).
+
+1. Open **ChatGPT → Settings → Connectors → Advanced / Add MCP server**
+2. Add a server with:
+   - **Command:** `node`
+   - **Arguments:** `C:\Keepra\keepra-mcp.js`
+   - **Environment:** `KEEPRA_KEY=YOUR_KEY_HERE` and `KEEPRA_URL=http://127.0.0.1:47615`
+3. Save and enable the connector, then start a new chat
+4. Test: ask *"List my Keepra tasks"*
+
+> If your ChatGPT build doesn't expose MCP connectors yet, use Claude, Cursor, or Windsurf in the meantime — the Keepra server is identical for every client.
 
 ---
 

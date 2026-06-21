@@ -7,12 +7,12 @@
 ## App
 
 - [Keepra Web App](https://keepra.tech/app.html): The live app. Works in any browser. PWA-installable for offline use.
-- [Downloads](https://keepra.tech/downloads/): Windows Electron installer and Android APK.
+- [Downloads](https://github.com/mudassir-awan/keepra/releases/latest): Windows Electron installer (.exe) and Android APK, hosted on GitHub Releases.
 
 ## Documentation
 
 - [Installation Guide](docs/INSTALL.md): How to install Keepra on Web, Windows, and Android.
-- [MCP Integration Guide](docs/MCP-SETUP.md): How to connect Claude Desktop, Claude Code, Cursor, Windsurf to Keepra via MCP.
+- [MCP Integration Guide](docs/MCP-SETUP.md): How to connect Claude Desktop, Claude Code, ChatGPT, Cursor, Windsurf, and any MCP-compatible client to Keepra via MCP.
 - [Changelog](docs/CHANGELOG.md): What changed in each version.
 - [Roadmap](docs/ROADMAP.md): Planned features and current status.
 - [Security Policy](SECURITY.md): Encryption model and vulnerability disclosure.
@@ -23,7 +23,7 @@
 - **Encryption**: AES-256-GCM with PBKDF2 (600,000 iterations, SHA-256). Zero-knowledge: the server never sees plaintext.
 - **Platforms**: Web (PWA), Windows 10+ (Electron), Android 8+ (APK). iOS/macOS planned.
 - **Pricing**: Free during public beta (2026). Paid plans (Free / Pro / Lifetime) launching around Q4 2026.
-- **MCP**: Keepra ships an MCP server (keepra-mcp.js) for AI client integration. Works with Claude Desktop, Claude Code, Cursor, Windsurf.
+- **MCP**: Keepra ships an MCP server (keepra-mcp.js) for AI client integration. Works with any MCP-compatible assistant — Claude Desktop, Claude Code, ChatGPT, Cursor, and Windsurf — using scoped, device-local, revocable keys.
 - **Sync**: Cross-device sync via a single Secret Key. Same key on any device means same Firebase account means same decrypted data. No email or password required.
 - **Open source**: No. Proprietary. This GitHub repository is the public community hub (issues, docs, downloads).
 - **Contact**: keepra.tech - support@keepra.tech
