@@ -22,13 +22,13 @@ This is the public roadmap for Keepra. Items marked ✅ are shipped; 🔜 are pl
 
 | Feature | Status |
 |---------|--------|
-| Links — bookmark manager | ✅ Shipped |
-| Vault — encrypted credentials | ✅ Shipped |
-| Notes — Markdown editor | ✅ Shipped |
-| Tasks — to-do lists | ✅ Shipped |
-| Contacts — people directory | ✅ Shipped |
-| Drive — encrypted file storage | ✅ Shipped |
-| Dashboard — home overview | ✅ Shipped |
+| Links - bookmark manager | ✅ Shipped |
+| Vault - encrypted credentials | ✅ Shipped |
+| Notes - Markdown editor | ✅ Shipped |
+| Tasks - to-do lists | ✅ Shipped |
+| Contacts - people directory | ✅ Shipped |
+| Drive - encrypted file storage | ✅ Shipped |
+| Dashboard - home overview | ✅ Shipped |
 
 ---
 

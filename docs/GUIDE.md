@@ -36,7 +36,7 @@ The Links section is a bookmark manager built for people who deal with lots of U
 
 **How to add a link:**
 1. Click **+ Add Link**
-2. Paste the URL — Keepra auto-fills the title and icon
+2. Paste the URL - Keepra auto-fills the title and icon
 3. Add a category and optional tags
 4. Click Save
 
@@ -114,7 +114,7 @@ Contacts is a personal directory for the people you work or communicate with.
 
 **What you can do:**
 - Add a contact with name, company, role, and notes
-- Add unlimited phone numbers, emails, and links per contact — each with a label (Mobile, Work, Business, Portfolio, etc.)
+- Add unlimited phone numbers, emails, and links per contact - each with a label (Mobile, Work, Business, Portfolio, etc.)
 - Tag contacts for grouping
 - Pin contacts
 - Search by name, company, or tag
@@ -139,7 +139,7 @@ Drive stores important files: images, PDFs, ZIPs, and RARs. The quota is 50 MB. 
 
 **Supported file types:** PNG, JPG, GIF, WebP, SVG, PDF, ZIP, RAR
 
-**Note:** The 50 MB quota applies to the total size of all files. Encrypted cloud sync is included — files are never stored in plaintext on the server.
+**Note:** The 50 MB quota applies to the total size of all files. Encrypted cloud sync is included - files are never stored in plaintext on the server.
 
 ---
 
@@ -153,7 +153,7 @@ The MCP Connector lets you connect AI assistants (Claude, ChatGPT, Cursor, Winds
 
 1. You create a key in Keepra and choose exactly what the AI can access (tasks, notes, links, contacts, or specific vault items)
 2. You paste the key into your AI client's config
-3. The AI can then read and write your Keepra data — but only within the scopes you allowed
+3. The AI can then read and write your Keepra data - but only within the scopes you allowed
 4. Keys never leave your device and are never synced to the cloud
 
 ### Step 1 - Create a key
@@ -291,7 +291,7 @@ Once connected, you can prompt your AI assistant to:
 
 **Vault (scoped items only):**
 - The AI can reference specific vault items you explicitly granted access to
-- The AI never sees raw credentials — values are injected by Keepra at call time
+- The AI never sees raw credentials - values are injected by Keepra at call time
 - Use this for automating deployments, GitHub actions, or server tasks without hardcoding secrets
 
 ---

@@ -1,6 +1,6 @@
 # Installation Guide
 
-## Web (recommended — no install needed)
+## Web (recommended - no install needed)
 
 1. Open [keepra.tech/app.html](https://keepra.tech/app.html) in any modern browser
 2. To install as a PWA (for offline use and a native feel):
@@ -15,7 +15,7 @@
 Requirements: Windows 10 or later
 
 1. Download the `.exe` installer from [keepra.tech/downloads/](https://keepra.tech/downloads/)
-2. Run the installer — Windows may show a SmartScreen warning; click "More info → Run anyway" (the app is not code-signed yet)
+2. Run the installer - Windows may show a SmartScreen warning; click "More info → Run anyway" (the app is not code-signed yet)
 3. Keepra launches from the Start Menu or desktop shortcut
 4. Data is stored locally; sync is optional
 
@@ -80,7 +80,7 @@ Use the same JSON config block above in your client's MCP server settings.
 Use `http://localhost` instead (open via the desktop app or `node dev-server.js` for local dev).
 
 **"Windows protected your PC" on install?**
-The app is not yet code-signed. Click "More info → Run anyway" — the binary is safe to run.
+The app is not yet code-signed. Click "More info → Run anyway" - the binary is safe to run.
 
 **Android APK install blocked?**
 Enable "Install unknown apps" for your browser in Android settings.

@@ -4,11 +4,11 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 
 > **Prerequisites:**
 > - Keepra desktop app installed and running on your PC.
-> - **Node.js** installed and available in your system PATH. AI clients launch the MCP server by running `node keepra-mcp.js` — without it the connection silently fails. [Download Node.js →](https://nodejs.org/en/download)
+> - **Node.js** installed and available in your system PATH. AI clients launch the MCP server by running `node keepra-mcp.js` - without it the connection silently fails. [Download Node.js →](https://nodejs.org/en/download)
 
 ---
 
-## Step 1 — Create an API Key
+## Step 1 - Create an API Key
 
 1. Open Keepra on your PC
 2. Go to **Settings → MCP → My Keys**
@@ -63,7 +63,7 @@ Open `~/.claude/settings.json` (create it if it doesn't exist) and add under `"m
 }
 ```
 
-Save the file — Claude Code picks it up automatically on the next session.
+Save the file - Claude Code picks it up automatically on the next session.
 
 Test: start a session and type *"Show my Keepra notes"*.
 
@@ -81,7 +81,7 @@ ChatGPT Desktop supports MCP servers through **Settings → Connectors** (availa
 3. Save and enable the connector, then start a new chat
 4. Test: ask *"List my Keepra tasks"*
 
-> If your ChatGPT build doesn't expose MCP connectors yet, use Claude, Cursor, or Windsurf in the meantime — the Keepra server is identical for every client.
+> If your ChatGPT build doesn't expose MCP connectors yet, use Claude, Cursor, or Windsurf in the meantime - the Keepra server is identical for every client.
 
 ---
 
@@ -113,25 +113,25 @@ Any client that supports the MCP standard accepts the same `{"mcpServers": {"kee
 
 | Scope | Tools | Notes |
 |-------|-------|-------|
-| `tasks:read` | `list_tasks` | — |
-| `tasks:write` | `add_task`, `complete_task` | — |
-| `notes:read` | `list_notes`, `read_note` | — |
-| `notes:write` | `create_note`, `update_note` | — |
-| `links:read` | `list_links` | — |
-| `links:write` | `add_link` | — |
-| `contacts:read` | `list_contacts`, `get_contact` | — |
-| `contacts:write` | `add_contact` | — |
+| `tasks:read` | `list_tasks` | - |
+| `tasks:write` | `add_task`, `complete_task` | - |
+| `notes:read` | `list_notes`, `read_note` | - |
+| `notes:write` | `create_note`, `update_note` | - |
+| `links:read` | `list_links` | - |
+| `links:write` | `add_link` | - |
+| `contacts:read` | `list_contacts`, `get_contact` | - |
+| `contacts:write` | `add_contact` | - |
 | Vault item grant | `list_credentials`, `get_credential` | Per-item, enabled in each item's edit modal |
 | Vault item grant + run_command opt-in | `run_command` | Executes shell commands with vault secrets injected as env vars. Requires explicit opt-in when creating the key. Keepra asks for confirmation on first use. |
 | Vault item grant | `ftp_list`, `ftp_upload`, `ftp_download`, `ftp_delete`, `ftp_mkdir`, `ftp_rename` | FTP operations using credentials stored in the vault. The AI never sees the password. |
 
-Grant only the scopes your AI needs — scope down to individual vault items for maximum security.
+Grant only the scopes your AI needs - scope down to individual vault items for maximum security.
 
 ---
 
 ## Security model
 
 - Keys are **device-local** and never synced to the cloud
-- Each key enforces its scope on every call — the AI cannot access data beyond what the key allows
+- Each key enforces its scope on every call - the AI cannot access data beyond what the key allows
 - The Keepra desktop app must be running; there is no always-on cloud endpoint
 - Revoke any key at any time in Settings → MCP → My Keys → Trash icon
