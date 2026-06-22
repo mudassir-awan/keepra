@@ -4,7 +4,12 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 
 > **Prerequisites:**
 > - Keepra desktop app installed and running on your PC.
-> - **Node.js** installed and available in your system PATH. AI clients launch the MCP server by running `node keepra-mcp.js` - without it the connection silently fails. [Download Node.js →](https://nodejs.org/en/download)
+> - **Node.js** installed and available in your system PATH (clients run the server via `npx -y keepra-mcp`, which needs Node). [Download Node.js →](https://nodejs.org/en/download)
+
+> **Fastest:** Claude Code users can skip the config files entirely:
+> ```bash
+> claude mcp add keepra --env KEEPRA_KEY=YOUR_KEY_HERE -- npx -y keepra-mcp
+> ```
 
 ---
 
@@ -27,7 +32,7 @@ Connect any MCP-compatible AI assistant to your Keepra data with scoped, revocab
 {
   "mcpServers": {
     "keepra": {
-      "command": "node",
+      "command": "npx",
       "args": ["C:\\Keepra\\keepra-mcp.js"],
       "env": {
         "KEEPRA_KEY": "YOUR_KEY_HERE",
@@ -52,7 +57,7 @@ Open `~/.claude/settings.json` (create it if it doesn't exist) and add under `"m
 {
   "mcpServers": {
     "keepra": {
-      "command": "node",
+      "command": "npx",
       "args": ["C:\\Keepra\\keepra-mcp.js"],
       "env": {
         "KEEPRA_KEY": "YOUR_KEY_HERE",
@@ -75,8 +80,8 @@ ChatGPT Desktop supports MCP servers through **Settings → Connectors** (availa
 
 1. Open **ChatGPT → Settings → Connectors → Advanced / Add MCP server**
 2. Add a server with:
-   - **Command:** `node`
-   - **Arguments:** `C:\Keepra\keepra-mcp.js`
+   - **Command:** `npx`
+   - **Arguments:** `-y keepra-mcp`
    - **Environment:** `KEEPRA_KEY=YOUR_KEY_HERE` and `KEEPRA_URL=http://127.0.0.1:47615`
 3. Save and enable the connector, then start a new chat
 4. Test: ask *"List my Keepra tasks"*

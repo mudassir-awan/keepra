@@ -83,18 +83,22 @@ That's it. No email, no separate password, no registration.
 
 Keepra ships an [MCP](https://modelcontextprotocol.io) server so the AI you already use can read and write your tasks, notes, links, and contacts - **safely and on your terms**. It works with **Claude (Desktop & Code), ChatGPT, Cursor, Windsurf, and any MCP-compatible client.** Each connection uses a scoped API key you create inside the app, and you decide exactly which tools (and which individual vault items) the AI may touch. Keys are device-local and revocable at any time.
 
-**Prerequisites:** the Keepra desktop app running, plus [Node.js](https://nodejs.org/en/download) installed (clients launch the server with `node keepra-mcp.js`).
+**Prerequisites:** the Keepra desktop app running, plus [Node.js](https://nodejs.org/en/download).
 
-**In-app setup:** open Keepra → **Settings → MCP → MCP Integration** for a guided, copy-paste walkthrough.
+**Easiest - one line (Claude Code):**
 
-Quick config (Claude Desktop, Cursor, Windsurf, and most clients use this same shape - replace `YOUR_KEY_HERE` with the key you create in the app):
+```bash
+claude mcp add keepra --env KEEPRA_KEY=YOUR_KEY_HERE -- npx -y keepra-mcp
+```
+
+**Any other client (Claude Desktop, Cursor, Windsurf, ChatGPT):** add this to its MCP config - no install or file paths, `npx` fetches the published [`keepra-mcp`](https://www.npmjs.com/package/keepra-mcp) server:
 
 ```json
 {
   "mcpServers": {
     "keepra": {
-      "command": "node",
-      "args": ["C:\\Keepra\\keepra-mcp.js"],
+      "command": "npx",
+      "args": ["-y", "keepra-mcp"],
       "env": {
         "KEEPRA_KEY": "YOUR_KEY_HERE",
         "KEEPRA_URL": "http://127.0.0.1:47615"
@@ -103,6 +107,8 @@ Quick config (Claude Desktop, Cursor, Windsurf, and most clients use this same s
   }
 }
 ```
+
+Replace `YOUR_KEY_HERE` with a key you create in Keepra → **Settings → MCP → MCP Integration** (a guided, copy-paste walkthrough).
 
 Full multi-client guide (Claude Desktop, Claude Code, ChatGPT, Cursor, Windsurf, and others): **[docs/MCP-SETUP.md](docs/MCP-SETUP.md)**
 
