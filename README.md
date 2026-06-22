@@ -25,31 +25,18 @@ Everything is stored and encrypted **on your device** and works fully offline. C
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshot-desktop.png" alt="Keepra on Windows - Links section" width="700" />
+  <img src="assets/screenshot-desktop.png" alt="Keepra Dashboard on Windows" width="700" />
   <br />
-  <em>Keepra Desktop - Links section (Windows)</em>
+  <em>Keepra Desktop - Dashboard (Windows)</em>
 </p>
 
-<table align="center">
-  <tr>
-    <td align="center"><img src="assets/tab-dashboard.png" width="220" /><br/><sub>Dashboard</sub></td>
-    <td align="center"><img src="assets/tab-vault.png" width="220" /><br/><sub>Vault</sub></td>
-    <td align="center"><img src="assets/tab-notes.png" width="220" /><br/><sub>Notes</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/tab-tasks.png" width="220" /><br/><sub>Tasks</sub></td>
-    <td align="center"><img src="assets/tab-contacts.png" width="220" /><br/><sub>Contacts</sub></td>
-    <td align="center"><img src="assets/tab-mcp-integration.png" width="220" /><br/><sub>MCP Connector</sub></td>
-  </tr>
-</table>
-
 <p align="center">
-  <img src="assets/screenshot-android.png" alt="Keepra on Android" width="300" />
+  <img src="assets/screenshot-android.png" alt="Keepra Dashboard on Android" width="300" />
   <br />
   <em>Keepra on Android</em>
 </p>
 
-See the **[full visual guide with screenshots of every section](docs/GUIDE.md)**, including how to set up the MCP Connector.
+See the **[full visual guide with screenshots of every section](docs/GUIDE.md)** for the Dashboard, Vault, Notes, Tasks, Contacts and MCP Connector.
 
 ## What's inside
 
