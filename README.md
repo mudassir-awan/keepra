@@ -24,17 +24,18 @@ Everything is stored and encrypted **on your device** and works fully offline. C
 
 ## Screenshots
 
-<p align="center">
-  <img src="assets/screenshot-desktop.png" alt="Keepra Dashboard on Windows" width="700" />
-  <br />
-  <em>Keepra Desktop - Dashboard (Windows)</em>
-</p>
-
-<p align="center">
-  <img src="assets/screenshot-android.png" alt="Keepra Dashboard on Android" width="300" />
-  <br />
-  <em>Keepra on Android</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" valign="top">
+      <img src="assets/screenshot-desktop.png" alt="Keepra Dashboard on Windows" height="320" />
+      <br /><em>Windows - Dashboard</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="assets/screenshot-android.png" alt="Keepra Dashboard on Android" height="320" />
+      <br /><em>Android - Dashboard</em>
+    </td>
+  </tr>
+</table>
 
 See the **[full visual guide with screenshots of every section](docs/GUIDE.md)** for the Dashboard, Vault, Notes, Tasks, Contacts and MCP Connector.
 
