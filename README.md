@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  
   <img src="https://img.shields.io/badge/version-1.0.7-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/platform-Web%20%7C%20Windows%20%7C%20Android-brightgreen?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/status-public%20beta-orange?style=flat-square" alt="Beta" />
